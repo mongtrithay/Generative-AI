@@ -12,6 +12,7 @@ import swaggerOptions from './swagger';
 import chat from './src/routes/chat'
 import  Roadmap  from './src/routes/roadmap';
 import cors from "cors";
+import quiz from './src/routes/quiz';
 
 
 // Middleware setup
@@ -30,6 +31,7 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 // Routes setup
 app.use('/api/auth', auth)
 app.use('/api/chat', chat)
+app.use('/api/roadmap', quiz)
 app.use('/api/roadmap', Roadmap);
 
 
